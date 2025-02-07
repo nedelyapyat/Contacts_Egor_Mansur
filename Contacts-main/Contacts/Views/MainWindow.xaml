@@ -1,0 +1,41 @@
+﻿<Window x:Class="Contacts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contacts"
+        xmlns:uc = "clr-namespace:Contacts.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel 
+            Margin="5">
+            <TextBox
+                Name="contactsSearchTxtBox"
+                TextChanged="FilterCurrentContacts"/>
+            <Button 
+                Margin="0 10 0 0"
+                Name="btnAddContact"
+                Click="OpenAddWindow"
+                Content="Add contact"/>
+            <ListBox
+                HorizontalContentAlignment="Stretch"
+                Margin="0 10 0 0 "
+                Name="contactsListBox"
+                SelectionChanged="ContactsListBox_OnSelectionChanged"
+                Height="300">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalAlignment" Value="Stretch" />
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <uc:ContactView Contact="{Binding}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>
