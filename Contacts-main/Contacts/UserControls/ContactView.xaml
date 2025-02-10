@@ -7,20 +7,22 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel
-            Margin="5"
-            Orientation="Horizontal">
+        <StackPanel Margin="5" Orientation="Horizontal" Background="#1C1C1C">
             <TextBlock 
                 Margin="5 10"
                 Name="nameTextBlock" 
-                Foreground="Green"
-                FontWeight="Heavy"/>
+                Foreground="#FFD700"
+                FontWeight="Bold"/>
             <TextBlock 
                 Margin="5 10"
-                Name="phoneTextBlock" />
+                Name="phoneTextBlock" 
+                Foreground="#FFD700"
+                FontWeight="Bold"/>
             <TextBlock 
                 Margin="5 10"
-                Name="emailTextBlock" />
+                Name="emailTextBlock" 
+                Foreground="#FFD700"
+                FontWeight="Bold"/>
         </StackPanel>
     </Grid>
 </UserControl>
