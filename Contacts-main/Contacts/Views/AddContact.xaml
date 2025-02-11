@@ -45,15 +45,6 @@
                 Padding="10"/>
             <Button 
                 Margin="10 5"
-                Name="deleteButton"
-                Content="Delete"
-                Background="#FFD700"
-                Foreground="#1C1C1C"
-                BorderBrush="#FFD700"
-                FontWeight="Bold"
-                Padding="10"/>
-            <Button 
-                Margin="10 5"
                 Name="cancelButton"
                 Content="Cancel"
                 Background="#FFD700"
