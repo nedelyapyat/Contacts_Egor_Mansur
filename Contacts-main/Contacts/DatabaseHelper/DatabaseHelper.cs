@@ -28,4 +28,17 @@ public static class DatabaseHelper
         db.CreateTable<Contact>();
         db.Insert(contact);
     }
+
+    public static void DeleteContact(int contactId)
+    {
+        using (var context = new ContactsDbContext())
+        {
+            var contact = context.Contacts.Find(contactId);
+            if (contact != null)
+            {
+                context.Contacts.Remove(contact);
+                context.SaveChanges();
+            }
+        }
+    }
 }
