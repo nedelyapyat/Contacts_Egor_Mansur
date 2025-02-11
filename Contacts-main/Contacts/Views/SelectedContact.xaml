@@ -43,6 +43,7 @@
                 BorderBrush="#FFD700"
                 FontWeight="Bold"
                 Padding="10"/>
+           
             <Button 
                 Margin="10 5"
                 Name="cancelButton"
